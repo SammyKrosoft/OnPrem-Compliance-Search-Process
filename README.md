@@ -32,7 +32,7 @@ New-ManagementRoleAssignment "Mailbox Import Export Assignment" -SecurityGroup $
 Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 ```
 
-## COmpliance Search Process
+## Compliance Search Process
 
 Here's the process to complete Compliance Search and results exports as detailed in [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019):
 
