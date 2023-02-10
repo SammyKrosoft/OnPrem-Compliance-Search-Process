@@ -24,15 +24,13 @@ Or another example, if you need to give users the Mailbox Search, the Legal Hold
 $MeaningfulName = "Permissions for Compliance Search and Results Export"
 New-RoleGroup $MeaningfulName
 # Add the "Mailbox Import Export" built-in role to this new Role Group
-New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Mailbox Search"
-New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Legal Hold"
-New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Mailbox Import Export"
+New-ManagementRoleAssignment "Mailbox Search Assignment" -SecurityGroup $MeaningfulName -Role "Mailbox Search"
+New-ManagementRoleAssignment "Legal Hold Assignment" -SecurityGroup $MeaningfulName -Role "Legal Hold"
+New-ManagementRoleAssignment "Mailbox Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Mailbox Import Export"
 
 # Add a user or yourself as a member of this ROle Group
 Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 ```
-
-
 
 ## Sample
 
