@@ -1,4 +1,4 @@
-# Sample-ComplianceSearch-OnPrem
+# Compliance Search Process
 
 ## Permissions
 
@@ -32,9 +32,9 @@ New-ManagementRoleAssignment "Mailbox Import Export Assignment" -SecurityGroup $
 Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 ```
 
-## Sample
+## COmpliance Search Process
 
-Here is a sample Compliance and eDiscovery search example
+Here's the process to complete Compliance Search and results exports as detailed in [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019):
 
 ```powershell
 # Placing the search parameters in variables for convenience (avoiding to writing the same strings several times)
