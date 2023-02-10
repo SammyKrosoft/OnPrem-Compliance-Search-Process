@@ -1,5 +1,20 @@
 # Sample-ComplianceSearch-OnPrem
 
+## Permissions
+
+First you might need Mailbox Import Export permissions to be able to run and export results with New-MailboxSearch (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results:
+
+```powershell
+# Create a new Role Group with a meaningful name of your choice
+New-RoleGroup "Import and Export permissions"
+# Add the "Mailbox Import Export" built-in role to this new Role Group
+New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup "Import and Export permissions" -Role "Mailbox Import Export"
+# Add a user or yourself as a member of this ROle Group
+Add-RoleGroupMember -Identity "Import and Export Permissions" -Member canadadrey\samdrey
+```
+
+## Sample
+
 Here is a sample Compliance and eDiscovery search example
 
 ```powershell
