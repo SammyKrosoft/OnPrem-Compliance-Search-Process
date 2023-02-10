@@ -2,7 +2,11 @@
 
 ## Permissions
 
-First you might need Mailbox Import Export permissions to be able to run and export results with New-MailboxSearch (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results, in the below example for the user samdrey of the CanadaDrey domain:
+- To be able to run the ```New-ComplianceSearch``` cmdlet, you need the "Mailbox Search" management role, which is part of the "Discovery Management" role group (or you can create a custom role group with the Mailbox Search management role inside)
+
+- To be able to run the ```New-MailboxSearch``` cmdlet, you need the "Legal Hold" management role, which is part of the "Discovery Management" role group as well (or again, you can create a custom role group with the Legal Hold management role inside)
+
+- In addition to the above 2 management roles (both present in the "Discovery Management" Role Group), you might also need to have the "Mailbox Import Export" management role to be able to export results with New-MailboxSearch cmdlet (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results, in the below example for the user samdrey of the CanadaDrey domain:
 
 ```powershell
 # Create a new Role Group with a meaningful name of your choice
@@ -12,6 +16,23 @@ New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup "Import a
 # Add a user or yourself as a member of this ROle Group
 Add-RoleGroupMember -Identity "Import and Export Permissions" -Member canadadrey\samdrey
 ```
+
+Or another example, if you need to give users the Mailbox Search, the Legal Hold and the Mailbox Import Export management roles, you can create a custom Role Group with these commands:
+
+```powershell
+# Create a new Role Group with a meaningful name of your choice
+$MeaningfulName = "Permissions for Compliance Search and Results Export"
+New-RoleGroup $MeaningfulName
+# Add the "Mailbox Import Export" built-in role to this new Role Group
+New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Mailbox Search"
+New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Legal Hold"
+New-ManagementRoleAssignment "Import Export Assignment" -SecurityGroup $MeaningfulName -Role "Mailbox Import Export"
+
+# Add a user or yourself as a member of this ROle Group
+Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
+```
+
+
 
 ## Sample
 
