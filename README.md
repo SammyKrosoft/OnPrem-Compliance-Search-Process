@@ -2,7 +2,7 @@
 
 ## Permissions
 
-First you might need Mailbox Import Export permissions to be able to run and export results with New-MailboxSearch (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results:
+First you might need Mailbox Import Export permissions to be able to run and export results with New-MailboxSearch (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results, in the below example for the user samdrey of the CanadaDrey domain:
 
 ```powershell
 # Create a new Role Group with a meaningful name of your choice
