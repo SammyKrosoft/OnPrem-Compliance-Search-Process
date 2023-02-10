@@ -20,6 +20,6 @@ Start-ComplianceSearch -Identity $SearchName
 # Step 2 - Counting the number of mailboxes with results in these - check you have less than 500 with results, otherwise
 # you might need to narrow down the search with a better KQL query, or create groups of mailboxes with Distribution Lists, and use
 # -ExchangeLocation <Distribution List Name or SMTP address> with New-ComplianceSearch cmdlet.
-.\SourceMailboxes.ps1 $SearchName
+.\Count-SourceMailboxes.ps1 $SearchName
 ```
 
