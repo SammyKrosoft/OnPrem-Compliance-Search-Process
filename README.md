@@ -1,5 +1,10 @@
 # Compliance Search Process
 
+
+This "article" is to summarize the process of compliance search for Exchange 2016/2019. The process for Exchange Online is a bit different as it uses only the *-ComplianceSearch cmdlets, since New-MailboxSearch and Search-Mailbox eDiscovery cmdlets are deprecated for Exchange Online, and the New-ComplianceSearchActions cmdlet has options to purge unwanted e-mails that the Search-Mailbox cmdlet does in Exchange OnPrem.
+
+First ensure you have the proper permissions for the whole compliance search/eDiscovery process in Exchange OnPrem, then you can use the *-ComplianceSearch and New-MailboxSearch to search and export your results in Exchange 2016/2019.
+
 ## Permissions
 
 - To be able to run the ```New-ComplianceSearch``` cmdlet, you need the "Mailbox Search" management role, which is part of the "Discovery Management" role group (or you can create a custom role group with the Mailbox Search management role inside)
