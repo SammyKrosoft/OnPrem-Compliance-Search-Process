@@ -1,4 +1,4 @@
-# Compliance Search Process
+# Compliance Search Process for OnPrem e-mails
 
 
 This "article" is to summarize the process of compliance search for Exchange 2016/2019. The process for Exchange Online is a bit different as it uses only the *-ComplianceSearch cmdlets, since New-MailboxSearch and Search-Mailbox eDiscovery cmdlets are deprecated for Exchange Online, and the New-ComplianceSearchActions cmdlet has options to purge unwanted e-mails that the Search-Mailbox cmdlet does in Exchange OnPrem.
