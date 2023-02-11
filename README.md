@@ -37,9 +37,9 @@ New-ManagementRoleAssignment "Mailbox Import Export Assignment" -SecurityGroup $
 Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 ```
 
-## Compliance Search Process
+## Compliance Search simplified Process
 
-Here's the process to complete Compliance Search and results exports as detailed in [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019):
+Here's the simplified process to complete Compliance Search and results exports as detailed in [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019), using the PowerShell scripts from the article, slightly modified with added parameters and the Export function added (from ```New-MailboxMove```) on the ```RunSearch.ps1``` script from the article. You will find the mentionned .ps1 scripts on this repository:
 
 ```powershell
 # Placing the search parameters in variables for convenience (avoiding to writing the same strings several times)
