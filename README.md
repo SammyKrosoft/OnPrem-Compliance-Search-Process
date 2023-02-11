@@ -39,6 +39,27 @@ Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 
 ## Compliance Search simplified Process (for OnPrem e-mails)
 
+Quick note, from the mentionned MS article, the e-mail properties you can use on Compliance Searches are the following:
+
+- AttachmentNames
+- Bcc
+- Category
+- Cc
+- Folderid
+- From
+- HasAttachment
+- Importance
+- IsRead
+- ItemClass
+- Kind
+- Participants
+- Received
+- Recipients
+- Sent
+- Size
+- Subject
+- To
+
 Here's the simplified process to complete Compliance Search and results exports as detailed in [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019), using the PowerShell scripts from the article, slightly modified with added parameters and the Export function added (from ```New-MailboxMove```) on the ```RunSearch.ps1``` script from the article. You will find the mentionned .ps1 scripts on this repository:
 
 ```powershell
