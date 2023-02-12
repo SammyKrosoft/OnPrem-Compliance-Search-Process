@@ -7,11 +7,11 @@ First ensure you have the proper permissions for the whole compliance search/eDi
 
 ## Permissions
 
-- To be able to run the ```New-ComplianceSearch``` cmdlet, you need the "Mailbox Search" management role, which is part of the "Discovery Management" role group (or you can create a custom role group with the Mailbox Search management role inside)
+- To be able to run the ```New-ComplianceSearch``` cmdlet, you need the *"Mailbox Search" management role*, which is part of the *"Discovery Management" role group* (or you can create a custom role group with the Mailbox Search management role inside)
 
-- To be able to run the ```New-MailboxSearch``` cmdlet, you need the "Legal Hold" management role, which is part of the "Discovery Management" role group as well (or again, you can create a custom role group with the Legal Hold management role inside)
+- To be able to run the ```New-MailboxSearch``` cmdlet, you need the *"Legal Hold" management role*, which is part of the *"Discovery Management" role group* as well (or again, you can create a custom role group with the Legal Hold management role inside)
 
-- In addition to the above 2 management roles (both present in the "Discovery Management" Role Group), you might also need to have the "Mailbox Import Export" management role to be able to export results with New-MailboxSearch cmdlet (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results, in the below example for the user samdrey of the CanadaDrey domain:
+- In addition to the above 2 management roles (both present in the *"Discovery Management" Role Group*), you might also need to have the *"Mailbox Import Export" management role* to be able to export results with New-MailboxSearch cmdlet (last step on the below procedure). Here's a way to give a user or yourself the permissions to export search results, in the below example for the user samdrey of the CanadaDrey domain:
 
 ```powershell
 # Create a new Role Group with a meaningful name of your choice
