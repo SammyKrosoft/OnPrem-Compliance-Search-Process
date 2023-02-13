@@ -1,7 +1,9 @@
 # Compliance Search Process for OnPrem e-mails
 
 
-This "article" is to summarize the process of compliance search for Exchange 2016/2019. The process for Exchange Online is a bit different as it uses only the *-ComplianceSearch cmdlets, since New-MailboxSearch and Search-Mailbox eDiscovery cmdlets are deprecated for Exchange Online, and the New-ComplianceSearchActions cmdlet has options to purge unwanted e-mails that the Search-Mailbox cmdlet does in Exchange OnPrem.
+This "article" is to summarize the process of compliance search for Exchange 2016/2019. The process for Exchange Online is a bit different as it uses only the *-ComplianceSearch cmdlets, since New-MailboxSearch and Search-Mailbox eDiscovery cmdlets are being deprecated for Exchange Online, and the New-ComplianceSearchActions cmdlet has options to purge unwanted e-mails that the Search-Mailbox cmdlet does in Exchange OnPrem.
+
+The scripts from [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019) have been modified in this repository to start the MAilboxSearch, and I added an option to export the results in a Discovery Mailbox (a mailbox for which you have Full Access works as well to export the results in, but only in PowerShell, not in EAC)
 
 First ensure you have the proper permissions for the whole compliance search/eDiscovery process in Exchange OnPrem, then you can use the *-ComplianceSearch and New-MailboxSearch to search and export your results in Exchange 2016/2019.
 
