@@ -3,9 +3,9 @@
 
 This "article" is to summarize the process of compliance search for Exchange 2016/2019. The process for Exchange Online is a bit different as it uses only the *-ComplianceSearch cmdlets, since New-MailboxSearch and Search-Mailbox eDiscovery cmdlets are being deprecated for Exchange Online, and the New-ComplianceSearchActions cmdlet has options to purge unwanted e-mails that the Search-Mailbox cmdlet does in Exchange OnPrem.
 
-The scripts from [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019) have been modified in this repository to start the MAilboxSearch, and I added an option to export the results in a Discovery Mailbox (a mailbox for which you have Full Access works as well to export the results in, but only in PowerShell, not in EAC)
+The scripts from [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019) have been modified in this repository to start the MAilboxSearch after it's created (```Start-MailboxSearch```), and I added an option to export the results in a Discovery Mailbox (a mailbox for which you have Full Access works as well to export the results in, but only in PowerShell, not in EAC), but to be able to do this export, you need the "Mailbox Import Export" permission as mentionned in the *Permissions* section below.
 
-First ensure you have the proper permissions for the whole compliance search/eDiscovery process in Exchange OnPrem, then you can use the *-ComplianceSearch and New-MailboxSearch to search and export your results in Exchange 2016/2019.
+As specified above, you need the proper permissions for the whole *compliance search/eDiscovery/Export results* process in Exchange OnPrem to be able to use the *-ComplianceSearch and New-MailboxSearch to search and export your results in Exchange 2016/2019.
 
 ## Permissions
 
@@ -41,7 +41,7 @@ Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 
 ## Compliance Search simplified Process (for OnPrem e-mails)
 
-Quick note, from the mentionned MS article, the e-mail properties you can use on Compliance Searches are the following:
+Quick note, from that [MS article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019) I keep mentionning over and over, the e-mail properties you can use on Compliance Searches are the following:
 
 - AttachmentNames
 - Bcc
