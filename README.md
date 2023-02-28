@@ -43,6 +43,8 @@ Add-RoleGroupMember -Identity $MeaningfulName -Member canadadrey\samdrey
 
 Quick note, from that [MS article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019) I keep mentionning over and over, the e-mail properties you can use on Compliance Searches are the following:
 
+| 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|
 | AttachmentNames | Bcc | Category | Cc | Folderid | From |
 | HasAttachment | Importance | IsRead | ItemClass | Kind |Participants |
 | Received | Recipients | Sent | Size | Subject | To |
