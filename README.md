@@ -52,7 +52,7 @@ Here's the simplified process to complete Compliance Search and results exports 
 
   <img src=https://user-images.githubusercontent.com/33433229/221746403-caad4690-0f22-4d07-be7a-03568d462771.png width = 40%></img>
 
-And then below is the process expanded and commented in PowerShell code:
+And then below is the process expanded and commented in PowerShell code with a sample query using `sent` and `attachmentnames`:
 
 ```powershell
 # Placing the search parameters in variables for convenience (avoiding to writing the same strings several times)
