@@ -50,7 +50,7 @@ Quick note, from that [MS article](https://learn.microsoft.com/en-us/exchange/po
 
 Here's the simplified process to complete Compliance Search and results exports as detailed in [this Microsoft article](https://learn.microsoft.com/en-us/exchange/policy-and-compliance/ediscovery/compliance-search?view=exchserver-2019), using the PowerShell scripts from the article, slightly modified with added parameters and the Export function added (from ```New-MailboxMove```) on the ```RunSearch.ps1``` script from the article. You will find the mentionned .ps1 scripts on this repository:
 
-![image](https://user-images.githubusercontent.com/33433229/221746403-caad4690-0f22-4d07-be7a-03568d462771.png =600x)
+![image](https://user-images.githubusercontent.com/33433229/221746403-caad4690-0f22-4d07-be7a-03568d462771.png =600x600)
 
 
 ```powershell
